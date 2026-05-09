@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CandidateProfile",
+  "description": "Unified schema for Director or KOL candidates. Both types use the same engine.",
+  "type": "object",
+  "required": ["id", "name", "type", "genres", "style_tags", "experience_years", "past_projects"],
+  "properties": {
+    "id":               { "type": "string" },
+    "name":             { "type": "string" },
+    "type":             { "type": "string", "enum": ["director", "kol"] },
+    "genres":           { "type": "array", "items": { "type": "string" },
+                          "description": "e.g. ['reality_tv', 'tvc', 'music_video', 'documentary']" },
+    "style_tags":       { "type": "array", "items": { "type": "string" },
+                          "description": "e.g. ['cinematic', 'fast_paced', 'emotional', 'comedic']" },
+    "experience_years": { "type": "integer" },
+    "past_projects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["title", "genre", "role", "outcome"],
+        "properties": {
+          "title":   { "type": "string" },
+          "genre":   { "type": "string" },
+          "role":    { "type": "string" },
+          "outcome": { "type": "string", "description": "e.g. 'high_rating', 'award_won', 'on_time', 'over_budget'" }
+        }
+      }
+    },
+    "availability":     { "type": "boolean" },
+    "bio":              { "type": "string", "description": "Free-text bio used for semantic embedding" },
+    "contact":          { "type": "string" }
+  }
+}

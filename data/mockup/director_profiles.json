@@ -1,0 +1,82 @@
+[
+  {
+    "id": "dir_001",
+    "name": "Nguyễn Minh Khoa",
+    "type": "director",
+    "genres": ["reality_tv", "tvc"],
+    "style_tags": ["fast_paced", "comedic", "audience_driven"],
+    "experience_years": 8,
+    "availability": true,
+    "bio": "Đạo diễn chuyên thực hiện các chương trình thực tế có yếu tố hài, đã làm nhiều format gameshow và variety show cho các nhãn hàng FMCG. Phong cách dẫn dắt câu chuyện nhanh, giữ nhịp tốt cho format truyền hình.",
+    "past_projects": [
+      { "title": "Bước Nhảy Ngàn Cân S3", "genre": "reality_tv", "role": "director", "outcome": "high_rating" },
+      { "title": "TVC Vinamilk 2023", "genre": "tvc", "role": "director", "outcome": "on_time" },
+      { "title": "Gameshow Ẩm Thực Vàng", "genre": "reality_tv", "role": "director", "outcome": "award_won" }
+    ],
+    "contact": "khoa.nguyen@example.com"
+  },
+  {
+    "id": "dir_002",
+    "name": "Trần Thu Hà",
+    "type": "director",
+    "genres": ["documentary", "reality_tv"],
+    "style_tags": ["emotional", "cinematic", "character_driven"],
+    "experience_years": 11,
+    "availability": true,
+    "bio": "Đạo diễn có nền tảng phim tài liệu, chuyên khai thác chiều sâu nhân vật. Từng thực hiện nhiều chương trình thực tế thiên về câu chuyện người thật việc thật, phong cách quay giàu cảm xúc và hình ảnh đẹp.",
+    "past_projects": [
+      { "title": "Hành Trình Vượt Khó", "genre": "documentary", "role": "director", "outcome": "award_won" },
+      { "title": "Người Truyền Lửa S2", "genre": "reality_tv", "role": "director", "outcome": "high_rating" },
+      { "title": "Ký Ức Sài Gòn", "genre": "documentary", "role": "director", "outcome": "on_time" }
+    ],
+    "contact": "ha.tran@example.com"
+  },
+  {
+    "id": "dir_003",
+    "name": "Lê Bảo Châu",
+    "type": "director",
+    "genres": ["tvc", "music_video"],
+    "style_tags": ["cinematic", "visual_heavy", "brand_focused"],
+    "experience_years": 6,
+    "availability": false,
+    "bio": "Đạo diễn trẻ xuất thân từ quảng cáo, mạnh về hình ảnh và brand storytelling. Đã hợp tác với nhiều nhãn hàng lớn trong mảng TVC và MV ca sĩ. Phong cách hình ảnh hiện đại, thẩm mỹ cao.",
+    "past_projects": [
+      { "title": "TVC Grab Food Tết 2024", "genre": "tvc", "role": "director", "outcome": "on_time" },
+      { "title": "MV Sơn Tùng M-TP", "genre": "music_video", "role": "director", "outcome": "high_rating" },
+      { "title": "TVC Samsung Galaxy", "genre": "tvc", "role": "director", "outcome": "over_budget" }
+    ],
+    "contact": "chau.le@example.com"
+  },
+  {
+    "id": "dir_004",
+    "name": "Phạm Quốc Dũng",
+    "type": "director",
+    "genres": ["reality_tv", "gameshow"],
+    "style_tags": ["high_energy", "comedic", "fast_paced", "audience_driven"],
+    "experience_years": 14,
+    "availability": true,
+    "bio": "Kỳ cựu trong mảng gameshow và variety show truyền hình. Có kinh nghiệm làm việc với nhiều ekip lớn, quen với áp lực sản xuất dài kỳ. Phong cách dàn dựng chắc tay, biết cách giữ nhịp chương trình.",
+    "past_projects": [
+      { "title": "Thách Thức Danh Hài S5", "genre": "gameshow", "role": "director", "outcome": "high_rating" },
+      { "title": "Ký Ức Vui Vẻ S4", "genre": "reality_tv", "role": "director", "outcome": "award_won" },
+      { "title": "Vietnam's Got Talent S8", "genre": "reality_tv", "role": "co_director", "outcome": "high_rating" }
+    ],
+    "contact": "dung.pham@example.com"
+  },
+  {
+    "id": "dir_005",
+    "name": "Vũ Thanh Tùng",
+    "type": "director",
+    "genres": ["documentary", "social_content"],
+    "style_tags": ["authentic", "low_budget_friendly", "character_driven", "emotional"],
+    "experience_years": 5,
+    "availability": true,
+    "bio": "Đạo diễn trẻ chuyên nội dung digital và phim ngắn xã hội. Làm việc tốt với ngân sách hạn chế, khả năng khai thác cảm xúc tự nhiên từ nhân vật không chuyên. Phù hợp với các format thực tế có yếu tố cộng đồng.",
+    "past_projects": [
+      { "title": "Việt Nam Tử Tế", "genre": "documentary", "role": "director", "outcome": "award_won" },
+      { "title": "Series 'Góc Phố'", "genre": "social_content", "role": "director", "outcome": "on_time" },
+      { "title": "Mini Doc Highlands Coffee", "genre": "documentary", "role": "director", "outcome": "on_time" }
+    ],
+    "contact": "tung.vu@example.com"
+  }
+]
