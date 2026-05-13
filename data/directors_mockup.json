@@ -1,0 +1,677 @@
+[
+  {
+    "id": "DIR-001",
+    "name": "Nguyễn Minh Khoa",
+    "bio": "Chuyên gia TVC FMCG với 12 năm kinh nghiệm. Từng làm việc với các nhãn hàng tiêu dùng hàng đầu Việt Nam và quốc tế. Phong cách kể chuyện cảm xúc, giỏi dẫn dắt nhân vật thật trong môi trường gia đình.",
+    "years_experience": 12,
+    "base_day_rate": 1800,
+    "primary_location": "TP.HCM",
+    "primary_genre": "TVC",
+    "primary_style": "emotional_storytelling",
+    "specialties": ["FMCG", "F&B", "Healthcare"],
+    "notable_brands": ["Vinamilk", "TH True Milk", "Masan", "Nestlé VN"],
+    "collaboration_style": "detail_oriented",
+    "budget_min_usd": 15000,
+    "budget_max_usd": 80000,
+    "availability": {
+      "status": "available",
+      "available_from": "2026-05-20",
+      "lead_time_days": 14
+    },
+    "success_metrics": {
+      "avg_views_per_project": 4200000,
+      "client_satisfaction_score": 4.8,
+      "on_time_delivery_rate": 0.95,
+      "repeat_hire_rate": 0.72,
+      "award_count": 3
+    }
+  },
+  {
+    "id": "DIR-002",
+    "name": "Trần Thị Bảo Châu",
+    "bio": "Đạo diễn F&B và lifestyle với phong cách bold, màu sắc mạnh. Chuyên quảng cáo đồ ăn uống, thương hiệu trẻ. Có khả năng biến sản phẩm bình thường thành hình ảnh đẹp và hấp dẫn.",
+    "years_experience": 7,
+    "base_day_rate": 1200,
+    "primary_location": "TP.HCM",
+    "primary_genre": "TVC",
+    "primary_style": "bold_graphic",
+    "specialties": ["F&B", "FMCG", "Fashion"],
+    "notable_brands": ["Highlands Coffee", "Phúc Long", "Jollibee VN", "Hảo Hảo"],
+    "collaboration_style": "fast_turnaround",
+    "budget_min_usd": 8000,
+    "budget_max_usd": 35000,
+    "availability": {
+      "status": "booked",
+      "available_from": "2026-06-15",
+      "lead_time_days": 21
+    },
+    "success_metrics": {
+      "avg_views_per_project": 2800000,
+      "client_satisfaction_score": 4.5,
+      "on_time_delivery_rate": 0.88,
+      "repeat_hire_rate": 0.60,
+      "award_count": 1
+    }
+  },
+  {
+    "id": "DIR-003",
+    "name": "Lê Thu Hà",
+    "bio": "Đạo diễn Fashion và Luxury với 15 năm kinh nghiệm. Xuất thân từ nhiếp ảnh thời trang, có thẩm mỹ hình ảnh rất cao. Từng hợp tác với các nhãn hàng quốc tế tại thị trường Việt Nam.",
+    "years_experience": 15,
+    "base_day_rate": 2500,
+    "primary_location": "Hà Nội",
+    "primary_genre": "TVC",
+    "primary_style": "cinematic",
+    "specialties": ["Fashion", "Luxury", "Beauty"],
+    "notable_brands": ["Dior VN", "Louis Vuitton VN", "Canifa", "Elise"],
+    "collaboration_style": "auteur",
+    "budget_min_usd": 30000,
+    "budget_max_usd": 120000,
+    "availability": {
+      "status": "available",
+      "available_from": "2026-05-18",
+      "lead_time_days": 21
+    },
+    "success_metrics": {
+      "avg_views_per_project": 1500000,
+      "client_satisfaction_score": 4.9,
+      "on_time_delivery_rate": 0.91,
+      "repeat_hire_rate": 0.80,
+      "award_count": 6
+    }
+  },
+  {
+    "id": "DIR-004",
+    "name": "Phạm Quốc Dũng",
+    "bio": "Đạo diễn Tech và Telco với kinh nghiệm làm việc với các thương hiệu công nghệ lớn. Phong cách bold graphic, motion-heavy, phù hợp với sản phẩm cần truyền tải thông tin nhanh và rõ.",
+    "years_experience": 8,
+    "base_day_rate": 1400,
+    "primary_location": "TP.HCM",
+    "primary_genre": "TVC",
+    "primary_style": "bold_graphic",
+    "specialties": ["Tech", "Telco", "Automotive"],
+    "notable_brands": ["Viettel", "FPT", "Samsung VN", "VinFast"],
+    "collaboration_style": "collaborative",
+    "budget_min_usd": 12000,
+    "budget_max_usd": 50000,
+    "availability": {
+      "status": "available",
+      "available_from": "2026-05-15",
+      "lead_time_days": 10
+    },
+    "success_metrics": {
+      "avg_views_per_project": 3500000,
+      "client_satisfaction_score": 4.6,
+      "on_time_delivery_rate": 0.93,
+      "repeat_hire_rate": 0.65,
+      "award_count": 2
+    }
+  },
+  {
+    "id": "DIR-005",
+    "name": "Hoàng Anh Tú",
+    "bio": "Senior director chuyên Banking và Insurance, 18 năm trong nghề. Giỏi xây dựng brand film dài hơi, truyền tải uy tín và sự tin tưởng. Phong cách premium, chỉn chu từng khung hình.",
+    "years_experience": 18,
+    "base_day_rate": 3000,
+    "primary_location": "Hà Nội",
+    "primary_genre": "TVC",
+    "primary_style": "premium_brand",
+    "specialties": ["Banking", "Insurance", "Healthcare"],
+    "notable_brands": ["Techcombank", "Manulife", "Prudential VN", "BIDV"],
+    "collaboration_style": "detail_oriented",
+    "budget_min_usd": 40000,
+    "budget_max_usd": 150000,
+    "availability": {
+      "status": "booked",
+      "available_from": "2026-07-01",
+      "lead_time_days": 30
+    },
+    "success_metrics": {
+      "avg_views_per_project": 1200000,
+      "client_satisfaction_score": 4.9,
+      "on_time_delivery_rate": 0.97,
+      "repeat_hire_rate": 0.85,
+      "award_count": 8
+    }
+  },
+  {
+    "id": "DIR-006",
+    "name": "Võ Thị Lan Anh",
+    "bio": "Đạo diễn MV pop với phong cách cinematic, visual storytelling mạnh. Từng làm MV cho nhiều ca sĩ top chart Việt Nam. Biết cách biến lời bài hát thành câu chuyện hình ảnh cảm xúc.",
+    "years_experience": 6,
+    "base_day_rate": 1100,
+    "primary_location": "TP.HCM",
+    "primary_genre": "music_video",
+    "primary_style": "cinematic",
+    "specialties": ["Entertainment", "Fashion", "Beauty"],
+    "notable_brands": ["Spotify VN", "Warner Music VN", "Sony Music VN"],
+    "collaboration_style": "collaborative",
+    "budget_min_usd": 8000,
+    "budget_max_usd": 40000,
+    "availability": {
+      "status": "available",
+      "available_from": "2026-05-22",
+      "lead_time_days": 14
+    },
+    "success_metrics": {
+      "avg_views_per_project": 8500000,
+      "client_satisfaction_score": 4.7,
+      "on_time_delivery_rate": 0.85,
+      "repeat_hire_rate": 0.70,
+      "award_count": 2
+    }
+  },
+  {
+    "id": "DIR-007",
+    "name": "Đặng Minh Tuấn",
+    "bio": "Đạo diễn MV hip-hop và R&B trẻ, phong cách bold graphic và street aesthetic. Quen làm việc với các nghệ sĩ underground và mid-tier. Nhanh, tiết kiệm ngân sách, hiểu văn hóa giới trẻ.",
+    "years_experience": 3,
+    "base_day_rate": 600,
+    "primary_location": "TP.HCM",
+    "primary_genre": "music_video",
+    "primary_style": "bold_graphic",
+    "specialties": ["Entertainment", "Fashion"],
+    "notable_brands": ["Yeah1", "TikTok VN", "New Disc"],
+    "collaboration_style": "fast_turnaround",
+    "budget_min_usd": 2000,
+    "budget_max_usd": 12000,
+    "availability": {
+      "status": "available",
+      "available_from": "2026-05-14",
+      "lead_time_days": 7
+    },
+    "success_metrics": {
+      "avg_views_per_project": 5200000,
+      "client_satisfaction_score": 4.3,
+      "on_time_delivery_rate": 0.80,
+      "repeat_hire_rate": 0.55,
+      "award_count": 0
+    }
+  },
+  {
+    "id": "DIR-008",
+    "name": "Bùi Thanh Sơn",
+    "bio": "Đạo diễn MV ballad và nhạc trữ tình với 9 năm kinh nghiệm. Chuyên dòng nhạc cảm xúc, từng hợp tác với các ca sĩ hàng đầu. Mỗi MV như một short film, chú trọng diễn xuất và cảm xúc thật.",
+    "years_experience": 9,
+    "base_day_rate": 1500,
+    "primary_location": "Hà Nội",
+    "primary_genre": "music_video",
+    "primary_style": "emotional_storytelling",
+    "specialties": ["Entertainment", "Luxury"],
+    "notable_brands": ["Universal Music VN", "Amply Music", "BHD Star"],
+    "collaboration_style": "auteur",
+    "budget_min_usd": 15000,
+    "budget_max_usd": 60000,
+    "availability": {
+      "status": "booked",
+      "available_from": "2026-06-01",
+      "lead_time_days": 21
+    },
+    "success_metrics": {
+      "avg_views_per_project": 12000000,
+      "client_satisfaction_score": 4.8,
+      "on_time_delivery_rate": 0.89,
+      "repeat_hire_rate": 0.75,
+      "award_count": 4
+    }
+  },
+  {
+    "id": "DIR-009",
+    "name": "Ngô Thị Kim Ngân",
+    "bio": "Đạo diễn MV idol/K-pop style, fast-paced editing, choreo-focused. Làm việc với nhóm nhạc và ca sĩ trẻ. Giỏi dàn dựng cảnh quay múa, concept fantasy và màu sắc tươi sáng.",
+    "years_experience": 4,
+    "base_day_rate": 800,
+    "primary_location": "TP.HCM",
+    "primary_genre": "music_video",
+    "primary_style": "bold_graphic",
+    "specialties": ["Entertainment", "Fashion", "Beauty"],
+    "notable_brands": ["MLD Entertainment VN", "Yeah1 Music", "TikTok VN"],
+    "collaboration_style": "collaborative",
+    "budget_min_usd": 5000,
+    "budget_max_usd": 25000,
+    "availability": {
+      "status": "available",
+      "available_from": "2026-05-16",
+      "lead_time_days": 10
+    },
+    "success_metrics": {
+      "avg_views_per_project": 6800000,
+      "client_satisfaction_score": 4.4,
+      "on_time_delivery_rate": 0.82,
+      "repeat_hire_rate": 0.62,
+      "award_count": 1
+    }
+  },
+  {
+    "id": "DIR-010",
+    "name": "Trịnh Công Hùng",
+    "bio": "Đạo diễn indie/alternative MV, documentary realism. Thẩm mỹ hình ảnh tự nhiên, đời thường nhưng đẹp. Từng đoạt giải Cánh diều vàng cho MV ngắn. Thích làm việc với nghệ sĩ độc lập.",
+    "years_experience": 7,
+    "base_day_rate": 1000,
+    "primary_location": "Đà Nẵng",
+    "primary_genre": "music_video",
+    "primary_style": "documentary_realism",
+    "specialties": ["Entertainment", "F&B"],
+    "notable_brands": ["Cánh Diều Records", "Vietnam Airlines (promo)", "bia Sài Gòn"],
+    "collaboration_style": "auteur",
+    "budget_min_usd": 5000,
+    "budget_max_usd": 30000,
+    "availability": {
+      "status": "available",
+      "available_from": "2026-05-20",
+      "lead_time_days": 14
+    },
+    "success_metrics": {
+      "avg_views_per_project": 3200000,
+      "client_satisfaction_score": 4.6,
+      "on_time_delivery_rate": 0.87,
+      "repeat_hire_rate": 0.68,
+      "award_count": 3
+    }
+  },
+  {
+    "id": "DIR-011",
+    "name": "Phan Thị Diệu Linh",
+    "bio": "Đạo diễn phim tài liệu xã hội với 14 năm. Từng làm phim cho VTV, BBC Vietnam, và các tổ chức phi lợi nhuận. Phong cách quan sát tự nhiên, không sắp đặt. Rất mạnh trong khai thác nhân vật thật.",
+    "years_experience": 14,
+    "base_day_rate": 2000,
+    "primary_location": "Hà Nội",
+    "primary_genre": "documentary",
+    "primary_style": "documentary_realism",
+    "specialties": ["Healthcare", "Education", "FMCG"],
+    "notable_brands": ["VTV", "UNICEF VN", "Vinmec", "Pharmacity"],
+    "collaboration_style": "collaborative",
+    "budget_min_usd": 20000,
+    "budget_max_usd": 90000,
+    "availability": {
+      "status": "available",
+      "available_from": "2026-05-25",
+      "lead_time_days": 21
+    },
+    "success_metrics": {
+      "avg_views_per_project": 900000,
+      "client_satisfaction_score": 4.9,
+      "on_time_delivery_rate": 0.94,
+      "repeat_hire_rate": 0.78,
+      "award_count": 7
+    }
+  },
+  {
+    "id": "DIR-012",
+    "name": "Đỗ Văn Hiếu",
+    "bio": "Đạo diễn reality TV và gameshow với 11 năm. Quen với nhịp độ sản xuất dài kỳ, quản lý ekip lớn. Phong cách comedic, giữ nhịp chương trình tốt, biết cách tạo khoảnh khắc funny tự nhiên.",
+    "years_experience": 11,
+    "base_day_rate": 1700,
+    "primary_location": "TP.HCM",
+    "primary_genre": "reality_tv",
+    "primary_style": "comedic",
+    "specialties": ["Entertainment", "FMCG", "F&B"],
+    "notable_brands": ["VTV3", "HTV7", "Unilever VN", "Bia Tiger"],
+    "collaboration_style": "detail_oriented",
+    "budget_min_usd": 25000,
+    "budget_max_usd": 100000,
+    "availability": {
+      "status": "booked",
+      "available_from": "2026-07-10",
+      "lead_time_days": 30
+    },
+    "success_metrics": {
+      "avg_views_per_project": 15000000,
+      "client_satisfaction_score": 4.7,
+      "on_time_delivery_rate": 0.92,
+      "repeat_hire_rate": 0.82,
+      "award_count": 4
+    }
+  },
+  {
+    "id": "DIR-013",
+    "name": "Lương Thị Mỹ Dung",
+    "bio": "Đạo diễn corporate documentary, brand story, employer branding. Chuyên kể câu chuyện doanh nghiệp theo hướng con người — interview-heavy nhưng cinematic. Hay làm cho các tập đoàn lớn.",
+    "years_experience": 8,
+    "base_day_rate": 1300,
+    "primary_location": "TP.HCM",
+    "primary_genre": "documentary",
+    "primary_style": "cinematic",
+    "specialties": ["Banking", "Tech", "Healthcare", "Automotive"],
+    "notable_brands": ["VPBank", "FPT Software", "Vinmec", "Honda VN"],
+    "collaboration_style": "collaborative",
+    "budget_min_usd": 10000,
+    "budget_max_usd": 45000,
+    "availability": {
+      "status": "available",
+      "available_from": "2026-05-18",
+      "lead_time_days": 14
+    },
+    "success_metrics": {
+      "avg_views_per_project": 650000,
+      "client_satisfaction_score": 4.8,
+      "on_time_delivery_rate": 0.96,
+      "repeat_hire_rate": 0.74,
+      "award_count": 2
+    }
+  },
+  {
+    "id": "DIR-014",
+    "name": "Huỳnh Tấn Phát",
+    "bio": "Đạo diễn food documentary và lifestyle content. Chuyên quay đồ ăn, food tour, câu chuyện ẩm thực Việt. Phong cách warm, gần gũi, tôn vinh văn hóa ăn uống địa phương.",
+    "years_experience": 6,
+    "base_day_rate": 900,
+    "primary_location": "TP.HCM",
+    "primary_genre": "documentary",
+    "primary_style": "lifestyle",
+    "specialties": ["F&B", "Tourism", "FMCG"],
+    "notable_brands": ["The Coffee House", "Grab Food", "Acecook", "Bánh mì Hà Nội"],
+    "collaboration_style": "fast_turnaround",
+    "budget_min_usd": 5000,
+    "budget_max_usd": 25000,
+    "availability": {
+      "status": "available",
+      "available_from": "2026-05-14",
+      "lead_time_days": 7
+    },
+    "success_metrics": {
+      "avg_views_per_project": 2100000,
+      "client_satisfaction_score": 4.5,
+      "on_time_delivery_rate": 0.90,
+      "repeat_hire_rate": 0.66,
+      "award_count": 1
+    }
+  },
+  {
+    "id": "DIR-015",
+    "name": "Mai Xuân Trường",
+    "bio": "Đạo diễn phim tài liệu xã hội và CSR lâu năm, 16 năm kinh nghiệm. Từng làm cho World Bank, WHO, và nhiều NGO. Phong cách nghiêm túc, sâu sắc, đặt vấn đề rõ ràng.",
+    "years_experience": 16,
+    "base_day_rate": 2200,
+    "primary_location": "Hà Nội",
+    "primary_genre": "documentary",
+    "primary_style": "documentary_realism",
+    "specialties": ["Healthcare", "Education", "Banking"],
+    "notable_brands": ["World Bank VN", "WHO VN", "Bảo Việt", "MB Bank"],
+    "collaboration_style": "detail_oriented",
+    "budget_min_usd": 25000,
+    "budget_max_usd": 100000,
+    "availability": {
+      "status": "booked",
+      "available_from": "2026-08-01",
+      "lead_time_days": 30
+    },
+    "success_metrics": {
+      "avg_views_per_project": 450000,
+      "client_satisfaction_score": 4.9,
+      "on_time_delivery_rate": 0.98,
+      "repeat_hire_rate": 0.88,
+      "award_count": 11
+    }
+  },
+  {
+    "id": "DIR-016",
+    "name": "Đinh Thị Phương Thảo",
+    "bio": "Đạo diễn content lifestyle cho mạng xã hội, 3 năm kinh nghiệm. Nhanh nhạy với trend, hiểu platform TikTok và Instagram. Phong cách tươi sáng, relatable, hay làm với micro-influencer.",
+    "years_experience": 3,
+    "base_day_rate": 500,
+    "primary_location": "TP.HCM",
+    "primary_genre": "digital_content",
+    "primary_style": "lifestyle",
+    "specialties": ["Beauty", "F&B", "Fashion", "FMCG"],
+    "notable_brands": ["Innisfree VN", "Bách Hóa Xanh", "Coolmate"],
+    "collaboration_style": "fast_turnaround",
+    "budget_min_usd": 1500,
+    "budget_max_usd": 10000,
+    "availability": {
+      "status": "available",
+      "available_from": "2026-05-13",
+      "lead_time_days": 5
+    },
+    "success_metrics": {
+      "avg_views_per_project": 1800000,
+      "client_satisfaction_score": 4.3,
+      "on_time_delivery_rate": 0.85,
+      "repeat_hire_rate": 0.58,
+      "award_count": 0
+    }
+  },
+  {
+    "id": "DIR-017",
+    "name": "Cao Văn Khang",
+    "bio": "Đạo diễn content gaming và tech, 2 năm kinh nghiệm nhưng rất chuyên sâu. Hiểu cộng đồng gamer, esports, và ngôn ngữ hình ảnh của giới trẻ tech-savvy. Thường làm video ngắn dưới 90 giây.",
+    "years_experience": 2,
+    "base_day_rate": 400,
+    "primary_location": "TP.HCM",
+    "primary_genre": "digital_content",
+    "primary_style": "bold_graphic",
+    "specialties": ["Tech", "Entertainment", "Telco"],
+    "notable_brands": ["Garena VN", "Viettel Gaming", "ASUS VN"],
+    "collaboration_style": "fast_turnaround",
+    "budget_min_usd": 1000,
+    "budget_max_usd": 8000,
+    "availability": {
+      "status": "available",
+      "available_from": "2026-05-13",
+      "lead_time_days": 5
+    },
+    "success_metrics": {
+      "avg_views_per_project": 3500000,
+      "client_satisfaction_score": 4.2,
+      "on_time_delivery_rate": 0.78,
+      "repeat_hire_rate": 0.50,
+      "award_count": 0
+    }
+  },
+  {
+    "id": "DIR-018",
+    "name": "Lý Thị Bích Vân",
+    "bio": "Đạo diễn beauty và fashion content, 5 năm. Chuyên làm content cho các nhãn mỹ phẩm và thời trang, phong cách cinematic nhưng accessible. Có network với nhiều beauty influencer.",
+    "years_experience": 5,
+    "base_day_rate": 900,
+    "primary_location": "TP.HCM",
+    "primary_genre": "digital_content",
+    "primary_style": "cinematic",
+    "specialties": ["Beauty", "Fashion", "Luxury"],
+    "notable_brands": ["L'Oréal VN", "Maybelline VN", "Eva de Eva"],
+    "collaboration_style": "collaborative",
+    "budget_min_usd": 5000,
+    "budget_max_usd": 25000,
+    "availability": {
+      "status": "booked",
+      "available_from": "2026-06-05",
+      "lead_time_days": 14
+    },
+    "success_metrics": {
+      "avg_views_per_project": 2500000,
+      "client_satisfaction_score": 4.6,
+      "on_time_delivery_rate": 0.88,
+      "repeat_hire_rate": 0.65,
+      "award_count": 1
+    }
+  },
+  {
+    "id": "DIR-019",
+    "name": "Tống Minh Đức",
+    "bio": "Đạo diễn content F&B và social, chuyên comedic storytelling. Phong cách hài hước, gần gũi, hay dùng influencer làm nhân vật chính. Biết cách tạo hook mạnh trong 3 giây đầu.",
+    "years_experience": 4,
+    "base_day_rate": 700,
+    "primary_location": "TP.HCM",
+    "primary_genre": "digital_content",
+    "primary_style": "comedic",
+    "specialties": ["F&B", "FMCG", "Entertainment"],
+    "notable_brands": ["KFC VN", "Pepsi VN", "Sting", "Trà sữa Gong Cha"],
+    "collaboration_style": "fast_turnaround",
+    "budget_min_usd": 3000,
+    "budget_max_usd": 18000,
+    "availability": {
+      "status": "available",
+      "available_from": "2026-05-15",
+      "lead_time_days": 7
+    },
+    "success_metrics": {
+      "avg_views_per_project": 4800000,
+      "client_satisfaction_score": 4.5,
+      "on_time_delivery_rate": 0.86,
+      "repeat_hire_rate": 0.63,
+      "award_count": 0
+    }
+  },
+  {
+    "id": "DIR-020",
+    "name": "Vũ Thị Thanh Huyền",
+    "bio": "Đạo diễn corporate video và employer branding, 7 năm. Chuyên làm video giới thiệu công ty, sự kiện nội bộ, thông điệp CEO. Phong cách premium, professional, phù hợp với B2B.",
+    "years_experience": 7,
+    "base_day_rate": 1100,
+    "primary_location": "Hà Nội",
+    "primary_genre": "corporate_video",
+    "primary_style": "premium_brand",
+    "specialties": ["Banking", "Tech", "Healthcare", "Automotive"],
+    "notable_brands": ["ACB", "VNG", "Vingroup", "Toyota VN"],
+    "collaboration_style": "detail_oriented",
+    "budget_min_usd": 8000,
+    "budget_max_usd": 40000,
+    "availability": {
+      "status": "available",
+      "available_from": "2026-05-20",
+      "lead_time_days": 14
+    },
+    "success_metrics": {
+      "avg_views_per_project": 380000,
+      "client_satisfaction_score": 4.8,
+      "on_time_delivery_rate": 0.95,
+      "repeat_hire_rate": 0.76,
+      "award_count": 2
+    }
+  },
+  {
+    "id": "DIR-021",
+    "name": "Dương Đức Tài",
+    "bio": "Đạo diễn automotive TVC và brand film cấp cao, 13 năm. Chuyên xe hơi và công nghệ vận hành. Từng quay TVC ở nước ngoài cho VinFast và Toyota VN. Rất mạnh trong các cảnh quay xe di chuyển.",
+    "years_experience": 13,
+    "base_day_rate": 2200,
+    "primary_location": "TP.HCM",
+    "primary_genre": "TVC",
+    "primary_style": "cinematic",
+    "specialties": ["Automotive", "Tech", "Luxury"],
+    "notable_brands": ["VinFast", "Toyota VN", "Honda VN", "Michelin VN"],
+    "collaboration_style": "detail_oriented",
+    "budget_min_usd": 35000,
+    "budget_max_usd": 130000,
+    "availability": {
+      "status": "available",
+      "available_from": "2026-05-25",
+      "lead_time_days": 21
+    },
+    "success_metrics": {
+      "avg_views_per_project": 2800000,
+      "client_satisfaction_score": 4.8,
+      "on_time_delivery_rate": 0.93,
+      "repeat_hire_rate": 0.79,
+      "award_count": 5
+    }
+  },
+  {
+    "id": "DIR-022",
+    "name": "Trần Thị Thùy Dương",
+    "bio": "Đạo diễn luxury brand và high-end fashion, 17 năm. Thẩm mỹ rất cao, từng học điện ảnh tại Pháp. Làm việc chủ yếu với các nhãn hàng quốc tế tại Việt Nam và Đông Nam Á.",
+    "years_experience": 17,
+    "base_day_rate": 3500,
+    "primary_location": "TP.HCM",
+    "primary_genre": "TVC",
+    "primary_style": "premium_brand",
+    "specialties": ["Luxury", "Fashion", "Beauty"],
+    "notable_brands": ["Chanel VN", "Hermès VN", "Bulgari VN", "Cartier VN"],
+    "collaboration_style": "auteur",
+    "budget_min_usd": 60000,
+    "budget_max_usd": 200000,
+    "availability": {
+      "status": "booked",
+      "available_from": "2026-09-01",
+      "lead_time_days": 45
+    },
+    "success_metrics": {
+      "avg_views_per_project": 800000,
+      "client_satisfaction_score": 5.0,
+      "on_time_delivery_rate": 0.90,
+      "repeat_hire_rate": 0.90,
+      "award_count": 12
+    }
+  },
+  {
+    "id": "DIR-023",
+    "name": "Nguyễn Văn Nhật",
+    "bio": "Đạo diễn TVC healthcare và pharma với 9 năm. Biết cách xây dựng trust trong thông điệp y tế mà vẫn emotional và accessible. Tuân thủ chặt quy định quảng cáo dược phẩm.",
+    "years_experience": 9,
+    "base_day_rate": 1400,
+    "primary_location": "Hà Nội",
+    "primary_genre": "TVC",
+    "primary_style": "emotional_storytelling",
+    "specialties": ["Healthcare", "FMCG", "Insurance"],
+    "notable_brands": ["Vinmec", "Pharmacity", "AstraZeneca VN", "Bảo Việt Nhân Thọ"],
+    "collaboration_style": "detail_oriented",
+    "budget_min_usd": 12000,
+    "budget_max_usd": 55000,
+    "availability": {
+      "status": "available",
+      "available_from": "2026-05-20",
+      "lead_time_days": 14
+    },
+    "success_metrics": {
+      "avg_views_per_project": 1600000,
+      "client_satisfaction_score": 4.7,
+      "on_time_delivery_rate": 0.96,
+      "repeat_hire_rate": 0.73,
+      "award_count": 3
+    }
+  },
+  {
+    "id": "DIR-024",
+    "name": "Phạm Thị Kim Liên",
+    "bio": "Đạo diễn event coverage và entertainment content, 6 năm. Chuyên live show, concert film, và activation brand. Nhanh, linh hoạt, xử lý tốt trong môi trường live production.",
+    "years_experience": 6,
+    "base_day_rate": 950,
+    "primary_location": "TP.HCM",
+    "primary_genre": "digital_content",
+    "primary_style": "bold_graphic",
+    "specialties": ["Entertainment", "FMCG", "Telco"],
+    "notable_brands": ["Heineken VN", "Mobifone", "Galaxy Studio", "ZME"],
+    "collaboration_style": "fast_turnaround",
+    "budget_min_usd": 6000,
+    "budget_max_usd": 30000,
+    "availability": {
+      "status": "available",
+      "available_from": "2026-05-15",
+      "lead_time_days": 10
+    },
+    "success_metrics": {
+      "avg_views_per_project": 3800000,
+      "client_satisfaction_score": 4.5,
+      "on_time_delivery_rate": 0.88,
+      "repeat_hire_rate": 0.62,
+      "award_count": 1
+    }
+  },
+  {
+    "id": "DIR-025",
+    "name": "Hà Minh Quang",
+    "bio": "Đạo diễn TVC Telco và mobile brand, 8 năm. Chuyên thể loại bold, thông điệp rõ, call-to-action mạnh. Quen làm A/B test creative cho digital campaign.",
+    "years_experience": 8,
+    "base_day_rate": 1300,
+    "primary_location": "Hà Nội",
+    "primary_genre": "TVC",
+    "primary_style": "bold_graphic",
+    "specialties": ["Telco", "Tech", "Banking"],
+    "notable_brands": ["Viettel", "Mobifone", "Vinaphone", "MB Bank"],
+    "collaboration_style": "collaborative",
+    "budget_min_usd": 10000,
+    "budget_max_usd": 45000,
+    "availability": {
+      "status": "available",
+      "available_from": "2026-05-16",
+      "lead_time_days": 10
+    },
+    "success_metrics": {
+      "avg_views_per_project": 4100000,
+      "client_satisfaction_score": 4.6,
+      "on_time_delivery_rate": 0.92,
+      "repeat_hire_rate": 0.68,
+      "award_count": 2
+    }
+  }
+]
