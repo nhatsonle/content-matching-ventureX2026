@@ -11,29 +11,8 @@ from datetime import date
 from deepagents import create_deep_agent
 from langchain_core.messages import HumanMessage
 
-from llm import llm
+from llm import google_llm, xai_llm
 from models import BriefRequest
-from tools import search_web
-
-SYSTEM_PROMPT = """
-You are a casting advisor at a Vietnamese media production company.
-Given the campaign brief and director profile, use the websearch tool you have to research if the director is a good fit for the campaign.
-Use a diverse set of queries for websearch to gather a broad range of information.
-Ex:
-- "Scandals involve {director_name}"
-- "Netizens boycott product involve with {director_name}"
-- "{director_name} work on similar projects"
-- "{director_name} content genre"
-Do also pay attention to the current date and the date of the websearch results, as they may provide additional context.
-Ex: A scandal too long ago may not be relevant to the current campaign.
-Produce a detail and concise report explaining why the director is a good fit for the campaign.
-Be specific - reference their actual experience, style, their past track record and your research results.
-Reference your own research (if any) and the director's actual experience.
-"""
-
-
-USER_PROMPT = """
-Today's date: {today}
 from tools import search_web
 
 SYSTEM_PROMPT = """
@@ -62,7 +41,6 @@ Campaign Brief:
 - Type: {campaign_type}
 - Tone: {tone}
 - Budget: ${budget_usd}
-- Budget: ${budget_usd}
 - Description: {description}
 
 Director Profile:
@@ -76,16 +54,15 @@ Director Profile:
 """
 
 
-agent = create_deep_agent(model=llm, tools=[search_web], system_prompt=SYSTEM_PROMPT)
+google_agent = create_deep_agent(model=google_llm, tools=[search_web], system_prompt=SYSTEM_PROMPT)
 
-
-agent = create_deep_agent(model=llm, tools=[search_web], system_prompt=SYSTEM_PROMPT)
+xai_agent = None
+if xai_llm:
+    xai_agent = create_deep_agent(model=xai_llm, tools=[search_web], system_prompt=SYSTEM_PROMPT)
 
 
 def generate_explanation(brief: BriefRequest, candidate: dict) -> str:
     meta = candidate["metadata"]
-    prompt = USER_PROMPT.format(
-        today=date.today(),
     prompt = USER_PROMPT.format(
         today=date.today(),
         brand=brief.brand,
@@ -104,10 +81,21 @@ def generate_explanation(brief: BriefRequest, candidate: dict) -> str:
     )
 
     def _invoke():
-        response = agent.invoke({"messages": HumanMessage(content=prompt)})
-        if isinstance(response.content, list):
-            return response.content[0].text
-        return response.content
+        try:
+            print("Attempting explanation generation using Google GenAI...")
+            response = google_agent.invoke({"messages": HumanMessage(content=prompt)})
+            if isinstance(response.content, list):
+                return response.content[0].text
+            return response.content
+        except Exception as e:
+            print(f"Google GenAI failed with error: {e}. Falling back to xAI (Grok)...")
+            if not xai_agent:
+                raise RuntimeError("xAI Grok agent is not configured (missing XAI_API_KEY). Fallback aborted.") from e
+            
+            response = xai_agent.invoke({"messages": HumanMessage(content=prompt)})
+            if isinstance(response.content, list):
+                return response.content[0].text
+            return response.content
 
     with concurrent.futures.ThreadPoolExecutor(max_workers=1) as executor:
         future = executor.submit(_invoke)

@@ -40,9 +40,9 @@ def match(brief: BriefRequest):
             score=c["score"],
             score_breakdown=ScoreBreakdown(**c["score_breakdown"]),
             explanation=generate_explanation(brief, c),
-            availability_status=c["metadata"]["availability_status"],
-            available_from=c["metadata"]["available_from"],
-            notable_brands=c["metadata"]["notable_brands"].split(","),
+            availability_status=c["metadata"].get("availability", {}).get("status", c["metadata"].get("availability_status", "unknown")),
+            available_from=c["metadata"].get("availability", {}).get("available_from", c["metadata"].get("available_from", "")),
+            notable_brands=c["metadata"]["notable_brands"] if isinstance(c["metadata"]["notable_brands"], list) else [b.strip() for b in c["metadata"]["notable_brands"].split(",") if b.strip()],
             collaboration_style=c["metadata"]["collaboration_style"],
         ))
 
