@@ -54,7 +54,11 @@ def main():
     texts = [build_text(p) for p in directors]
     embeddings = model.encode(texts).tolist()
 
-    client = chromadb.PersistentClient(path=settings.chroma_persist_dir)
+    from chromadb.config import Settings
+    client = chromadb.PersistentClient(
+        path=settings.chroma_persist_dir,
+        settings=Settings(anonymized_telemetry=False)
+    )
     collection = client.get_or_create_collection(settings.collection_name)
 
     collection.upsert(

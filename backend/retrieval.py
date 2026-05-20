@@ -28,7 +28,11 @@ def _get_model() -> SentenceTransformer:
 
 @lru_cache(maxsize=1)
 def _get_collection():
-    client = chromadb.PersistentClient(path=settings.chroma_persist_dir)
+    from chromadb.config import Settings
+    client = chromadb.PersistentClient(
+        path=settings.chroma_persist_dir,
+        settings=Settings(anonymized_telemetry=False)
+    )
     collection = client.get_or_create_collection(settings.collection_name)
     if collection.count() == 0:
         raise RuntimeError(
