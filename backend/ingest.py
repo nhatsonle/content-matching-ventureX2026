@@ -3,6 +3,9 @@ Owner: Đức
 Run once (or re-run to refresh): python ingest.py
 Loads directors_mockup.json → embeds → stores in ChromaDB.
 """
+import os
+os.environ["ANONYMIZED_TELEMETRY"] = "FALSE"
+
 import json
 from pathlib import Path
 from sentence_transformers import SentenceTransformer

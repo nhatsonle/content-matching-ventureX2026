@@ -1,6 +1,9 @@
 """
 Run: uvicorn main:app --reload  (from inside backend/)
 """
+import os
+os.environ["ANONYMIZED_TELEMETRY"] = "FALSE"
+
 import time
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
