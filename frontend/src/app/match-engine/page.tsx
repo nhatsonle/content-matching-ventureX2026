@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import type { MatchResponse } from '@/lib/data/types'
 import PageHeader from '@/components/layout/PageHeader'
 import BriefForm from '@/components/match-engine/BriefForm'
@@ -11,6 +11,24 @@ import { Separator } from '@/components/ui/separator'
 export default function MatchEnginePage() {
   const [result, setResult] = useState<MatchResponse | null>(null)
   const [loading, setLoading] = useState(false)
+
+  // Load result from localStorage on mount
+  useEffect(() => {
+    const saved = localStorage.getItem('match_engine_result')
+    if (saved) {
+      try {
+        setResult(JSON.parse(saved))
+      } catch (e) {
+        console.error('Failed to parse saved match engine results:', e)
+      }
+    }
+  }, [])
+
+  const handleResult = (data: MatchResponse) => {
+    setResult(data)
+    localStorage.setItem('match_engine_result', JSON.stringify(data))
+    setLoading(false)
+  }
 
   return (
     <div className="max-w-4xl">
@@ -23,10 +41,7 @@ export default function MatchEnginePage() {
         {/* Form */}
         <div>
           <BriefForm
-            onResult={data => {
-              setResult(data)
-              setLoading(false)
-            }}
+            onResult={handleResult}
             onLoading={setLoading}
           />
         </div>
