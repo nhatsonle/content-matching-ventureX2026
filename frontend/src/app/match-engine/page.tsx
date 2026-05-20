@@ -61,7 +61,7 @@ export default function MatchEnginePage() {
                   {result.total_candidates_considered} candidates considered
                 </p>
                 <p className="text-xs text-muted-foreground">
-                  {result.response_time_ms?.toFixed(0)}ms
+                  {result.response_time_ms ? `${(result.response_time_ms / 1000).toFixed(1)}s` : ''}
                 </p>
               </div>
 
