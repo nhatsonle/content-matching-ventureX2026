@@ -35,15 +35,15 @@ export default function MatchEnginePage() {
   }
 
   return (
-    <div className="max-w-4xl">
+    <div className="max-w-6xl">
       <PageHeader
         title="Match Engine"
         description="AI-powered director matching — fill in your campaign brief to get a shortlist of best-fit directors."
       />
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
         {/* Form */}
-        <div>
+        <div className="lg:col-span-5">
           <BriefForm
             onResult={handleResult}
             onLoading={setLoading}
@@ -51,7 +51,7 @@ export default function MatchEnginePage() {
         </div>
 
         {/* Results */}
-        <div>
+        <div className="lg:col-span-7">
           {loading && <MatchResultsSkeleton />}
 
           {!loading && result && result.shortlist.length > 0 && (
