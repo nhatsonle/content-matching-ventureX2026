@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
@@ -45,6 +45,7 @@ interface BriefFormProps {
 }
 
 export default function BriefForm({ onResult, onLoading }: BriefFormProps) {
+  const [provider, setProvider] = useState('google')
   const [brand, setBrand] = useState('')
   const [industry, setIndustry] = useState('')
   const [campaignType, setCampaignType] = useState('')
@@ -55,6 +56,46 @@ export default function BriefForm({ onResult, onLoading }: BriefFormProps) {
   const [topN, setTopN] = useState(5)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  const [isMounted, setIsMounted] = useState(false)
+
+  // Load draft from localStorage on mount
+  useEffect(() => {
+    const savedForm = localStorage.getItem('match_engine_form')
+    if (savedForm) {
+      try {
+        const parsed = JSON.parse(savedForm)
+        if (parsed.provider) setProvider(parsed.provider)
+        if (parsed.brand) setBrand(parsed.brand)
+        if (parsed.industry) setIndustry(parsed.industry)
+        if (parsed.campaignType) setCampaignType(parsed.campaignType)
+        if (parsed.tone) setTone(parsed.tone)
+        if (parsed.budgetUsd !== undefined) setBudgetUsd(parsed.budgetUsd)
+        if (parsed.timelineWeeks !== undefined) setTimelineWeeks(parsed.timelineWeeks)
+        if (parsed.description) setDescription(parsed.description)
+        if (parsed.topN !== undefined) setTopN(parsed.topN)
+      } catch (e) {
+        console.error('Failed to parse saved form draft:', e)
+      }
+    }
+    setIsMounted(true)
+  }, [])
+
+  // Auto-save form data on change
+  useEffect(() => {
+    if (!isMounted) return
+    const data = {
+      provider,
+      brand,
+      industry,
+      campaignType,
+      tone,
+      budgetUsd,
+      timelineWeeks,
+      description,
+      topN,
+    }
+    localStorage.setItem('match_engine_form', JSON.stringify(data))
+  }, [provider, brand, industry, campaignType, tone, budgetUsd, timelineWeeks, description, topN, isMounted])
 
   const isValid = brand.trim().length > 0 && description.trim().length >= 30 && !loading
 
@@ -71,6 +112,7 @@ export default function BriefForm({ onResult, onLoading }: BriefFormProps) {
       timeline_weeks: timelineWeeks,
       description: description.trim(),
       top_n: topN,
+      provider: provider,
     }
 
     setLoading(true)
@@ -95,6 +137,21 @@ export default function BriefForm({ onResult, onLoading }: BriefFormProps) {
       </CardHeader>
       <CardContent>
         <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+          {/* LLM Provider */}
+          <div className="flex flex-col gap-1.5">
+            <label className="text-sm font-medium">Model Provider *</label>
+            <Select value={provider} onValueChange={v => setProvider(v ?? 'google')}>
+              <SelectTrigger>
+                <SelectValue placeholder="Select model provider" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="google">Google Gemini</SelectItem>
+                <SelectItem value="xai">xAI Grok</SelectItem>
+                <SelectItem value="openai">OpenAI GPT</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+
           {/* Brand */}
           <div className="flex flex-col gap-1.5">
             <label className="text-sm font-medium">Brand *</label>

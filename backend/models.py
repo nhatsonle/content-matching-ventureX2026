@@ -10,6 +10,7 @@ class BriefRequest(BaseModel):
     timeline_weeks: int
     description: str
     top_n: int = 5
+    provider: str = "google"
 
 
 class ScoreBreakdown(BaseModel):

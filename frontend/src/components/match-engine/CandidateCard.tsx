@@ -19,6 +19,68 @@ function ScoreCircle({ score }: { score: number }) {
   )
 }
 
+function parseBoldText(text: string) {
+  const parts = text.split('**')
+  return parts.map((part, i) => {
+    if (i % 2 === 1) {
+      return (
+        <strong key={i} className="font-semibold text-foreground">
+          {part}
+        </strong>
+      )
+    }
+    return part
+  })
+}
+
+function renderMarkdown(content: string) {
+  if (!content) return null
+
+  const lines = content.split('\n')
+  return (
+    <div className="space-y-2 text-sm text-muted-foreground leading-relaxed">
+      {lines.map((line, i) => {
+        const trimmed = line.trim()
+        if (!trimmed) return null
+
+        // Headings (##, ###)
+        if (trimmed.startsWith('## ')) {
+          return (
+            <h4 key={i} className="text-sm font-bold text-foreground mt-4 mb-2">
+              {parseBoldText(trimmed.slice(3))}
+            </h4>
+          )
+        }
+        if (trimmed.startsWith('### ')) {
+          return (
+            <h5 key={i} className="text-xs font-bold text-foreground mt-3 mb-1">
+              {parseBoldText(trimmed.slice(4))}
+            </h5>
+          )
+        }
+
+        // List item (- or *)
+        if (trimmed.startsWith('- ') || trimmed.startsWith('* ')) {
+          return (
+            <ul key={i} className="list-disc pl-4 my-1">
+              <li className="text-sm">
+                {parseBoldText(trimmed.slice(2))}
+              </li>
+            </ul>
+          )
+        }
+
+        // Regular paragraph
+        return (
+          <p key={i} className="my-1">
+            {parseBoldText(trimmed)}
+          </p>
+        )
+      })}
+    </div>
+  )
+}
+
 export default function CandidateCard({ candidate }: CandidateCardProps) {
   const isAvailable = candidate.availability_status === 'available'
 
@@ -47,11 +109,7 @@ export default function CandidateCard({ candidate }: CandidateCardProps) {
 
         <Separator />
 
-        {candidate.explanation && (
-          <p className="text-sm text-muted-foreground leading-relaxed">
-            {candidate.explanation}
-          </p>
-        )}
+        {candidate.explanation && renderMarkdown(candidate.explanation)}
 
         {candidate.collaboration_style && (
           <p className="text-xs text-muted-foreground italic">
@@ -72,3 +130,4 @@ export default function CandidateCard({ candidate }: CandidateCardProps) {
     </Card>
   )
 }
+

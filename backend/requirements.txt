@@ -10,3 +10,4 @@ langchain-core
 langchain-google-genai
 deepagents
 requests
+langchain-xai

@@ -11,29 +11,8 @@ from datetime import date
 from deepagents import create_deep_agent
 from langchain_core.messages import HumanMessage
 
-from llm import llm
+from llm import google_llm, xai_llm, openai_llm
 from models import BriefRequest
-from tools import search_web
-
-SYSTEM_PROMPT = """
-You are a casting advisor at a Vietnamese media production company.
-Given the campaign brief and director profile, use the websearch tool you have to research if the director is a good fit for the campaign.
-Use a diverse set of queries for websearch to gather a broad range of information.
-Ex:
-- "Scandals involve {director_name}"
-- "Netizens boycott product involve with {director_name}"
-- "{director_name} work on similar projects"
-- "{director_name} content genre"
-Do also pay attention to the current date and the date of the websearch results, as they may provide additional context.
-Ex: A scandal too long ago may not be relevant to the current campaign.
-Produce a detail and concise report explaining why the director is a good fit for the campaign.
-Be specific - reference their actual experience, style, their past track record and your research results.
-Reference your own research (if any) and the director's actual experience.
-"""
-
-
-USER_PROMPT = """
-Today's date: {today}
 from tools import search_web
 
 SYSTEM_PROMPT = """
@@ -62,7 +41,6 @@ Campaign Brief:
 - Type: {campaign_type}
 - Tone: {tone}
 - Budget: ${budget_usd}
-- Budget: ${budget_usd}
 - Description: {description}
 
 Director Profile:
@@ -76,16 +54,19 @@ Director Profile:
 """
 
 
-agent = create_deep_agent(model=llm, tools=[search_web], system_prompt=SYSTEM_PROMPT)
+google_agent = create_deep_agent(model=google_llm, tools=[search_web], system_prompt=SYSTEM_PROMPT)
 
+xai_agent = None
+if xai_llm:
+    xai_agent = create_deep_agent(model=xai_llm, tools=[search_web], system_prompt=SYSTEM_PROMPT)
 
-agent = create_deep_agent(model=llm, tools=[search_web], system_prompt=SYSTEM_PROMPT)
+openai_agent = None
+if openai_llm:
+    openai_agent = create_deep_agent(model=openai_llm, tools=[search_web], system_prompt=SYSTEM_PROMPT)
 
 
 def generate_explanation(brief: BriefRequest, candidate: dict) -> str:
     meta = candidate["metadata"]
-    prompt = USER_PROMPT.format(
-        today=date.today(),
     prompt = USER_PROMPT.format(
         today=date.today(),
         brand=brief.brand,
@@ -104,17 +85,52 @@ def generate_explanation(brief: BriefRequest, candidate: dict) -> str:
     )
 
     def _invoke():
+        if brief.provider == "openai":
+            if not openai_agent:
+                raise ValueError("OpenAI API key is not configured on the server.")
+            agent = openai_agent
+            provider_name = "OpenAI"
+        elif brief.provider == "xai":
+            if not xai_agent:
+                raise ValueError("xAI API key is not configured on the server.")
+            agent = xai_agent
+            provider_name = "xAI (Grok)"
+        else:
+            if not google_agent:
+                raise ValueError("Google API key is not configured on the server.")
+            agent = google_agent
+            provider_name = "Google GenAI"
+
+        print(f"Attempting explanation generation using {provider_name}...")
         response = agent.invoke({"messages": HumanMessage(content=prompt)})
-        if isinstance(response.content, list):
-            return response.content[0].text
-        return response.content
+        
+        # deepagents returns a dict with 'messages' list; get the last message
+        if isinstance(response, dict) and "messages" in response:
+            last_msg = response["messages"][-1]
+            content = last_msg.content
+        else:
+            # Fallback if it is already a message or another format
+            content = response.content if hasattr(response, "content") else response
+            
+        if isinstance(content, list):
+            texts = []
+            for block in content:
+                if isinstance(block, dict) and block.get("type") == "text":
+                    texts.append(block.get("text", ""))
+                elif hasattr(block, "text"):
+                    texts.append(block.text)
+                elif isinstance(block, str):
+                    texts.append(block)
+            return "\n".join(texts)
+        return content
 
     with concurrent.futures.ThreadPoolExecutor(max_workers=1) as executor:
         future = executor.submit(_invoke)
         try:
-            return future.result(timeout=10)
+            return future.result(timeout=25)
         except concurrent.futures.TimeoutError:
-            return f"[timeout] Agent did not finish in 10s for {meta['name']}"
+            return f"[timeout] Agent did not finish in 25s for {meta['name']}"
+
 
 
 if __name__ == "__main__":
