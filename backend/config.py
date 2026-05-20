@@ -5,6 +5,7 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 class Settings(BaseSettings):
     openai_api_key: Optional[str] = None
+    openai_model: str = "gpt-5.4-mini"
     chroma_persist_dir: str = "./chroma_db"
     data_path: str = "../data/directors_mockup.json"
     collection_name: str = "directors"

@@ -161,6 +161,7 @@ export interface BriefRequest {
   timeline_weeks: number
   description: string
   top_n: number
+  provider: string
 }
 
 export interface ScoreBreakdown {
@@ -175,7 +176,7 @@ export interface ScoreBreakdown {
 
 export interface CandidateResult {
   rank: number
-  director_id: number
+  director_id: string
   name: string
   score: number
   score_breakdown: ScoreBreakdown
